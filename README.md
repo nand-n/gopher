@@ -18,3 +18,11 @@ Hash algorithms are designed to be one-way funcitons , means extremely difficult
 - Single key 
 ## Asynchronous encryption 
 - public / private key 
+
+
+# Controll Flow 
+- sequence 
+- conditional 
+- loop 
+Controll flow refers to the order in which the statements instructions and operations are executed in a computer program . It determines the sequence in which the instructions are executed 
+  
