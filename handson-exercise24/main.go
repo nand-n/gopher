@@ -16,7 +16,7 @@ func main() {
 	// }
 
 	m := map[string]int{
-		"james": 43,
+		"james": 20,
 		"Money": 43,
 	}
 
