@@ -75,3 +75,7 @@ Refers to a code that is written in a concurent desing pattern , this means that
 Refers the ability of a program to execute multiple task simultaneously bu utilizing multiple cpus or cores. It helps execution speed up by allowing multiple part of the program to run in pallerlal on d/t processors.
 
 Go makes it easy to wto write concurent code using go rotines and channels.
+
+# nuladic :
+
+Of an operator or function in a program , having no argument.
