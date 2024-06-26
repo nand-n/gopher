@@ -9,4 +9,8 @@ func main() {
 	as := [...]string{"a", "b", "c"}
 	fmt.Println(len(as))
 	fmt.Println(as)
+
+	//slices
+	xs := []string{"Hello", "World"}
+	fmt.Println(xs)
 }
