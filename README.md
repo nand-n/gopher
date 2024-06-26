@@ -105,3 +105,5 @@ Of an operator or function in a program , having no argument.
 - A data structure
 - A composite type
 - Allows us to collect vallues of d/t type together
+
+#Arrays
