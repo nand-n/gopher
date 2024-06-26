@@ -79,3 +79,29 @@ Go makes it easy to wto write concurent code using go rotines and channels.
 # nuladic :
 
 Of an operator or function in a program , having no argument.
+
+# Go lang Data types
+
+## Array :
+
+- A numbered sequence of elements of the same type
+- Does not change in size
+- Used for ggo internals;
+
+## Slice
+
+- Built on top of an array
+- holds values of the same type
+- changes in size
+- has a length and a capacity
+
+## Map
+
+- Key / value storage
+- an unordered groups of elements of one type , called the element type , indexed by a set of unique key of another type called the key type
+
+## Struct
+
+- A data structure
+- A composite type
+- Allows us to collect vallues of d/t type together
