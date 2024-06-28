@@ -18,8 +18,9 @@ func main() {
 		fmt.Printf("index %v - value  %v \n", i, v)
 	}
 	fmt.Println(xs[0])
-
 	for i := 0; i < len(xs); i++ {
 		fmt.Println(xs[i])
 	}
+
+	xs = append(xs, "44", "45")
 }
