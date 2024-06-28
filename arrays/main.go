@@ -17,5 +17,6 @@ func main() {
 	for i, v := range xs {
 		fmt.Printf("index %v - value  %v \n", i, v)
 	}
+	fmt.Println(xs[0])
 
 }
