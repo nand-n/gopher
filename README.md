@@ -107,3 +107,7 @@ Of an operator or function in a program , having no argument.
 - Allows us to collect vallues of d/t type together
 
 # Arrays
+
+### func make
+
+the main built -in functino allocates and initializes an object of type slice , map or cahn(only).
