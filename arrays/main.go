@@ -19,4 +19,7 @@ func main() {
 	}
 	fmt.Println(xs[0])
 
+	for i := 0; i < len(xs); i++ {
+		fmt.Println(xs[i])
+	}
 }
