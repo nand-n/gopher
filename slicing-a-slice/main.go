@@ -9,5 +9,7 @@ func main() {
 	fmt.Println(xs[1:4])
 	//[:exclusive]
 	fmt.Println(xs[:2])
-
+	//Deleting from slice
+	xs = append(xs[:2], xs[3:]...)
+	fmt.Println(xs)
 }
