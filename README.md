@@ -111,3 +111,7 @@ Of an operator or function in a program , having no argument.
 ### func make
 
 the main built -in functino allocates and initializes an object of type slice , map or cahn(only).
+
+### Multi-dimentional slices
+
+is an array of arrays , where each elements can be accessed using multiples indices.
