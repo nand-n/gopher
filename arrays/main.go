@@ -13,4 +13,9 @@ func main() {
 	//slices
 	xs := []string{"Hello", "World"}
 	fmt.Println(xs)
+
+	for i, v := range xs {
+		fmt.Printf("index %v - value  %v \n", i, v)
+	}
+
 }
