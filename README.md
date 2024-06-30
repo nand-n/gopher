@@ -131,3 +131,7 @@ A map is a perfect data structure when you need to look up data fast.
 - seeing the length of the map
   - len
   - access element
+
+### Map - comma ok idiom
+
+If you look up a non-existent key , the zero value will be returned as the value associated with that non-existent key.

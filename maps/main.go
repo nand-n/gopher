@@ -19,4 +19,11 @@ func main() {
 	for i, v := range an {
 		fmt.Println(i, v)
 	}
+
+	v, ok := an["Georgee"]
+	if ok {
+		fmt.Println(v)
+	} else {
+		fmt.Println("Key doesn't exist.")
+	}
 }
