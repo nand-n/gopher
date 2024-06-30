@@ -115,3 +115,19 @@ the main built -in functino allocates and initializes an object of type slice , 
 ### Multi-dimentional slices
 
 is an array of arrays , where each elements can be accessed using multiples indices.
+
+## Composite / Aggregagte data structure
+
+### Map
+
+A map is a key-value store . This means that you store some value you access that value by a key
+Maps are unordered , if you print out all of the keys and values on a map they will printout inrandom order
+
+A map is a perfect data structure when you need to look up data fast.
+
+- Create a map
+- access element in a map
+- printout the entire map
+- seeing the length of the map
+  - len
+  - access element
