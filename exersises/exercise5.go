@@ -17,6 +17,8 @@ func main() {
 	xp := [][]string{jb, jm}
 
 	for i, v := range xp {
-		fmt.Println(i, v)
+		for a, b := range v {
+			fmt.Println(i, a, b)
+		}
 	}
 }
