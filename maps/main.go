@@ -12,6 +12,11 @@ func main() {
 
 	an := make(map[string]int)
 	an["Lukas"] = 28
+	delete(an, "Likas")
 	an["Steph"] = 45
 	fmt.Println(len(an))
+
+	for i, v := range an {
+		fmt.Println(i, v)
+	}
 }
