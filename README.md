@@ -237,4 +237,4 @@ func (reciever) identifier(paramerters)(returns) {code}
 - Parametersa and argumets
   - we define out fucn with paramets (if any)
   - we call our func and pass in arguments (in any)
-- Everything in go is pass by valueZ
+- Everything in go is pass by value
