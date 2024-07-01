@@ -3,25 +3,27 @@ package main
 import "fmt"
 
 type person struct {
-	first string
-	last  string
-	age   int
-}
-
-type secretAgent struct {
-	person
-	ltk bool
+	firstName               string
+	lastName                string
+	favoriteIceCreamFlavour string
 }
 
 func main() {
-	sa1 := secretAgent{
-		person: person{
-			first: "James",
-			last:  "Bond",
-			age:   22,
-		},
-		ltk: true,
+	p1 := person{
+		firstName:               "nah",
+		lastName:                "deb",
+		favoriteIceCreamFlavour: "vanila",
+	}
+	p2 := person{
+		firstName:               "bar",
+		lastName:                "d",
+		favoriteIceCreamFlavour: "chocolate",
+	}
+	xs := []person{
+		p1, p2,
 	}
 
-	fmt.Println(sa1)
+	for _, v := range xs {
+		fmt.Println(v.favoriteIceCreamFlavour)
+	}
 }
