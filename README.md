@@ -147,3 +147,20 @@ The concept of interface in go provides a d/t approach that we belives is easy t
 There is no ways to embade types in other types to provide somthing analogous -- but no identical -- to subclassing.
 
 Moreover the methods in go are more general than in c++ or java , they can be defined for any sort of data , even built in types such as plain , unboxed integers . They are not restricted to structs (classes)
+
+##
+
+Unlike oop , in go a type can be created directly form types
+
+```go
+  xd := struct {
+    first string
+    last string
+    age int
+  }{
+    first: "Jems",
+    last: "Bond"
+    age: 32
+  }
+
+```
