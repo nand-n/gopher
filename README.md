@@ -216,7 +216,7 @@ By using Composition , You can build complex types by combinign simpler ones , p
   4. Overriding
   - a. "promotion"
 
-##
-
 In Go You dont create classes , you create a type
 You dont instantiate , you create values of a type
+
+# Functions
