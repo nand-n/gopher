@@ -174,3 +174,28 @@ Composition is one of the funcamental principles of object oriented programming 
 One of the ways composition is achived is by embeing on estruct type with in another the fields and methods of the embeded "inner" struct become accessaible to hte outer struct.
 
 The Inner type is said to be promoted to the outer type . In addition , mthods of the inner type are also promoted to the outer type , Whcih is similar to inheritance in traditional oop langes but go does not have builtin inheritance mechanism.
+
+```go
+  type Engine struct {
+    //Engine fields
+  }
+
+//Engine method
+func (e *Engine) Start() {
+  fmt.Println("Engine Starteed")
+}
+
+type Car struct {
+  Engine // Embeding the engine struct
+  //Car specific fields
+}
+
+func main(){
+  car:=Car{}
+  car.Start() //Calling the Start Method form the embeded Engine struct
+}
+
+
+
+
+```
