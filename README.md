@@ -225,3 +225,16 @@ You dont instantiate , you create values of a type
   - Abastract code
   - Code reusablity
   - More understandable
+
+## syntax of function
+
+```go
+
+func (reciever) identifier(paramerters)(returns) {code}
+
+```
+
+- Parametersa and argumets
+  - we define out fucn with paramets (if any)
+  - we call our func and pass in arguments (in any)
+- Everything in go is pass by value
