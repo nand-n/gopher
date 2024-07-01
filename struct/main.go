@@ -26,4 +26,12 @@ func main() {
 	for _, v := range xs {
 		fmt.Println(v.favoriteIceCreamFlavour)
 	}
+
+	m := map[string]person{
+		p1.lastName: p1,
+		p2.lastName: p2,
+	}
+	for _, v := range m {
+
+	}
 }
