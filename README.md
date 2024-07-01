@@ -164,3 +164,13 @@ Unlike oop , in go a type can be created directly form types
   }
 
 ```
+
+## composition
+
+Composite data typs aka aggregate data typles aka complex data types , refers to a way of structturing and building complex types by combining multiple simple tpes.
+
+Composition is one of the funcamental principles of object oriented programming and allows you to create more flexible and reusable code .
+
+One of the ways composition is achived is by embeing on estruct type with in another the fields and methods of the embeded "inner" struct become accessaible to hte outer struct.
+
+The Inner type is said to be promoted to the outer type . In addition , mthods of the inner type are also promoted to the outer type , Whcih is similar to inheritance in traditional oop langes but go does not have builtin inheritance mechanism.
