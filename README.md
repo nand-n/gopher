@@ -220,3 +220,8 @@ In Go You dont create classes , you create a type
 You dont instantiate , you create values of a type
 
 # Functions
+
+- Structured code / procedural programming is one type of modular code and its purpose is
+  - Abastract code
+  - Code reusablity
+  - More understandable
