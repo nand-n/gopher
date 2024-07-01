@@ -136,4 +136,14 @@ A map is a perfect data structure when you need to look up data fast.
 
 If you look up a non-existent key , the zero value will be returned as the value associated with that non-existent key.
 
-### Map - count word
+### Structs
+
+#### Is go an object oriented language
+
+Yes and no . Although go has types and methods allows an object oriented styple of programming is not type hierarchy.
+
+The concept of interface in go provides a d/t approach that we belives is easy to use and in some ways more general .
+
+There is no ways to embade types in other types to provide somthing analogous -- but no identical -- to subclassing.
+
+Moreover the methods in go are more general than in c++ or java , they can be defined for any sort of data , even built in types such as plain , unboxed integers . They are not restricted to structs (classes)
