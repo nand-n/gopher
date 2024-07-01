@@ -204,3 +204,14 @@ By using Composition , You can build complex types by combinign simpler ones , p
 
 - It is all about types
   - Go has oop aspects , but it's all about type. We create types in go ; user-defined types . We can the have values of that type . We can assign values of a user-defined type to variables
+  - Go is object oriented
+  1. Encapsulation :
+     - a. State("Fields")
+     - b. behevior("methods")
+     - c. exported & unexported; viewable & not viewable
+  2. Reusabblity
+  - a. Inhertitance("Embedded types")
+  3. Polymorphosm
+  - a. interfaces
+  4. Overriding
+  - a. "promotion"
