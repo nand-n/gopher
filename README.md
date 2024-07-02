@@ -322,3 +322,9 @@ bytes := []byte(str)
 bytes := []byte{72,101,108,111}
 str := string(bytes)
 ```
+
+## byte buffer
+
+A byte buffer is a regin of memory used to temporarily store a sequence of bytes. it provides a data structure for efficient manipulation of byte data. A bye bffer allows you to read and write bytes to and form the bfferm, making it usefull for tasks like data serialization , network communication , file I/O and efficient string manipulation
+
+A byte buffer is a data structure tha provides a convenient interface to manipulate sequences of bytes efficiently. it serves as a temporary storage for byte and enable operations such as reading , writing , appending and resizing byte sequence
