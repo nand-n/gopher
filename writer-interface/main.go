@@ -37,7 +37,9 @@ func main() {
 	fmt.Println(b.String())
 	b.WriteString("Gophers ")
 	fmt.Println(b.String())
+	b.Reset()
 
 	b.Write([]byte("Happy Happy"))
 	fmt.Println(b.String())
+
 }
