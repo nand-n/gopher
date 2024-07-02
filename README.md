@@ -242,3 +242,13 @@ func (reciever) identifier(paramerters)(returns) {code}
 ## Variadic Parameter
 
 A Variadic Parameter is a func which takes an unlimited number of argumerts . When you do this , this is known as a veriadic parmeter . When use the lexical element operator "...T" to signify a variadic Parmameter (There "T" represents some types)
+
+The veriadic parameter mut be in the end
+
+Iff is variadic with final parameter p of type ...T , then within f the type of p is equivalent to type []T. IF f is invokked with no actual arguments for p , the value passed to p is nil . Otherwise the value passed is new slice of type []T with a new underlying array whose successive elements are the acutal arguments, which all must be assignable to T. THe length and capacity of the slice is therefore the number of arguments bound to p and may differ for each call site.
+
+```go
+  func Greeting(prefix string , who ...string)
+  Greeting("nobody")
+  Greeting("Hello:" , "Joe","Anna")
+```
