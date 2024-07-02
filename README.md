@@ -300,3 +300,25 @@ It act as an intermediary b/n the caller and teh wrapped function , allowing you
 rapper functions can be used for various purposes such as
 
 1. Logging : A wrapper function can add logging statements before and after invoking the wrapped functions. This helps in capturing information about the function call , inputs , parameters , return values and any errors that may occur.
+
+# Strings vs byte
+
+In go a string adn a []byte are two d/t types , but they are closely related and can often be converted b/n each other.
+
+A String in go represents a sequence of characters. ITis an immutable type , which means you can not modify individual charactes within a string.
+
+String values are always interprated as UTF-8 encoded Unicode text.
+
+On the other hand a []bye is a slice of bytes where each elements a single byte , it is a mutable type , so you can modify individual bytes within a byte slice . it can be used to represent binary data or text in various encodings
+
+To convert
+
+```go
+//string to slice of byte
+str:= "Hello"
+bytes := []byte(str)
+
+// slice of byte to string
+bytes := []byte{72,101,108,111}
+str := string(bytes)
+```
