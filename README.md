@@ -288,3 +288,15 @@ Polimorphism is the ability of a VALUE of a certain type to also be of another t
 ## type Stringer
 
 Stringer is implemented by any value that has a String method , which defines the 'native' format for that value. The string method is used to print values passed as an operand to any fomrat that accepts a string or to an unformatted printer such as print
+
+## Log
+
+### Wrapper function
+
+In go is a function that provides an additional layer of abstraction or functionality around an existing function or method .
+
+It act as an intermediary b/n the caller and teh wrapped function , allowing you to modify inoputs , outputs , or beheviour with out directly modifying the orginal function
+
+rapper functions can be used for various purposes such as
+
+1. Logging : A wrapper function can add logging statements before and after invoking the wrapped functions. This helps in capturing information about the function call , inputs , parameters , return values and any errors that may occur.
