@@ -238,3 +238,7 @@ func (reciever) identifier(paramerters)(returns) {code}
   - we define out fucn with paramets (if any)
   - we call our func and pass in arguments (in any)
 - Everything in go is pass by value
+
+## Variadic Parameter
+
+A Variadic Parameter is a func which takes an unlimited number of argumerts . When you do this , this is known as a veriadic parmeter . When use the lexical element operator "...T" to signify a variadic Parmameter (There "T" represents some types)
