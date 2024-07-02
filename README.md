@@ -284,3 +284,7 @@ Polimorphism is the ability of a VALUE of a certain type to also be of another t
 ---> in Go values can be of more than one type
 
 ##### Polimorphism refers to the ability of an object to be of an additional typ e and take on d/t beheviours. In the context of programming it allows values of d/t types to be treated as instance of a common type.
+
+## type Stringer
+
+Stringer is implemented by any value that has a String method , which defines the 'native' format for that value. The string method is used to print values passed as an operand to any fomrat that accepts a string or to an unformatted printer such as print
