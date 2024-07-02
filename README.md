@@ -252,3 +252,11 @@ Iff is variadic with final parameter p of type ...T , then within f the type of 
   Greeting("nobody")
   Greeting("Hello:" , "Joe","Anna")
 ```
+
+### Unfuriing a slice
+
+```go
+xi:= []int{1,2,3,4,5,6}
+//veriadic function
+s:= sum(xi...)
+```
