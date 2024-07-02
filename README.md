@@ -270,3 +270,17 @@ A "defer" statment invokes a function whose execution is deferred to the moment 
 - Or because the corresponding gorouting is panicking
 
 Go's defer statement schedules a funciton call (the deferred function) to be run immediately before the funciton executing the surrouning function . It is effective way to deal with situations such as resouces that must be released regardless of which path the function takes to retur.
+
+## Methods
+
+A method is nothing more than a FUNC attached to a TYPE. When you attach a func to a typ it is a mehtod of that type. You attach a func to a type with a reciever
+
+## Interfaces and Polimorphism
+
+An Interface in go defines a set of method signatures.
+
+Polimorphism is the ability of a VALUE of a certain type to also be of another type
+
+---> in Go values can be of more than one type
+
+##### Polimorphism refers to the ability of an object to be of an additional typ e and take on d/t beheviours. In the context of programming it allows values of d/t types to be treated as instance of a common type.
