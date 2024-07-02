@@ -260,3 +260,13 @@ xi:= []int{1,2,3,4,5,6}
 //veriadic function
 s:= sum(xi...)
 ```
+
+## Defer Statment
+
+A "defer" statment invokes a function whose execution is deferred to the moment the surrounding funciton returns , either becasue
+
+- The surrounding funciton executed a return statement
+- Reached the end of its function body
+- Or because the corresponding gorouting is panicking
+
+Go's defer statement schedules a funciton call (the deferred function) to be run immediately before the funciton executing the surrouning function . It is effective way to deal with situations such as resouces that must be released regardless of which path the function takes to retur.
