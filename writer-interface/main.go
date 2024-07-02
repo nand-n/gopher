@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -30,4 +32,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("error %s", err)
 	}
+
+	b := bytes.NewBufferString("Hello ")
+	fmt.Println(b.String())
+	b.WriteString("Gophers ")
+	fmt.Println(b.String())
 }
