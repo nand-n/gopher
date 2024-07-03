@@ -359,3 +359,7 @@ Recursion is the technique of solving a problem by breaking it down in to smalle
 When a recursive funciton is called it solves a smaller instance of the same problem and them combines the result of the smaller instance with the current instances to obtain the final reunst. The Function continures to call itself on smaller subproblems until it reaches a base case , which is a simple case that can be solved directly wilth out further recursion.
 
 Recurstion can be a powerful technique for solving problmes that exibit a recursive structire , such as tree traversal , graph traversal , ana many mathematical calculations. However it is important to design recursive functions carefully , ensuring that they have well-defined base case and property handle the termination condition to avoid infinite recursion.
+
+## Wrapper function
+
+A wrapper function is a function that provides an additional layer of abstraction or functionality around an existing funciton or methor. It acts as intermediary b/n the caller and wrapped fucntion allowing you to modify ilnputs , outputs or behevious , without directly modifying the orginal funciton. A wrapper function wraps or modifies another function's beheviour.
