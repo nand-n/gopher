@@ -8,6 +8,10 @@ func main() {
 	func() {
 		fmt.Println("Annonemous func ran ")
 	}()
+
+	func(s string) {
+		fmt.Println("this is my name", s)
+	}("todd")
 }
 
 func foo() {
