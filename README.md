@@ -347,3 +347,7 @@ Expressions are the building blocks of go programs and they are perfomme computa
 The Term first calss citizen refers to the status of certain entities such as values , types and functions , that are treated equally and have the same capabilities as other entities in the language. It means that these entities can be assigned to variables m passed as argumets to functions and returned as values from functions , just like any other data type in the language.
 
 In go functions are considered first calss citizen . they can be assiggned to variables , passed as argumetn s to toher functions and retuned as as values form functions. This allows go to support higher order fumnction whre function can operate on toher functions. For example you can define that takes another functions as an argument and then call that function within the body of the functio.
+
+## Closure
+
+Is a form of Anonymous funciton that refer to variables specified outside of the function itself. it is equivalent to accessign global variables that exited before the function's declaration. It works similar to regural fucnion and perform all the tings perfom by any function.
