@@ -340,6 +340,8 @@ Annonimus function are a self-executing func
 
 function ingo are first class citizens
 
+An expression is a combination of values , variables , operator and functions calls that are evaluated to produce a single value. It can be as simple as literal value or a variable or it can involve complex operations and functions invocations
+
 Expressions are the building blocks of go programs and they are perfomme computations , manipulte values and make decisions based on conditions. They assigned to variables , passed as arguments to functions or used in controll flow statment like if statments and loops.
 
 The Term first calss citizen refers to the status of certain entities such as values , types and functions , that are treated equally and have the same capabilities as other entities in the language. It means that these entities can be assigned to variables m passed as argumets to functions and returned as values from functions , just like any other data type in the language.
