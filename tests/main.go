@@ -10,6 +10,7 @@ func main() {
 
 	y := doMath(55, 77, subtract)
 	fmt.Println(y)
+	fmt.Println(paradise("hawai"))
 }
 func add(a int, b int) int {
 	return a + b
@@ -21,4 +22,8 @@ func doMath(a int, b int, f func(int, int) int) int {
 
 func subtract(a int, b int) int {
 	return a - b
+}
+
+func paradise(loc string) string {
+	return fmt.Sprint("My idea of paradise is ", loc)
 }
