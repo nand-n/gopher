@@ -371,3 +371,11 @@ Go privides a built int tesitng freamwork that simplifies the process of testing
 - Test files : live iln the same packages as the code they test. They are named with the following conversion 'filename_test.go' where filename is the name of the file thea contains the code you want to test.
 
 - Test functions : munst start with the word 'Test' Followed by a word that starts with a capital letter . The signature of a test function 'fucn TestXxx(\*testing.T)' whre Xxxx does not start with lower case later
+
+  ```go
+    package main
+
+    fucn Add(a int , b int) int {
+      return a + b
+    }
+  ```
