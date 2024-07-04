@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(Add(4, 5))
+	fmt.Println(add(4, 5))
 
 	x := doMath(42, 16, add)
 	fmt.Println(x)
