@@ -24,6 +24,18 @@ Exercise 3 :
 	defer  multiple funcion in main
 		show that a defferd func runs after the func containging it exits
 		determine the ordder in which the multiple defer funcs runs
+
+Exercose 4 :
+
+	Create a user defined struct witlh
+		the identifier person
+		the fields
+			- fist
+			- age
+	Attach a methor to a type person with
+		the identifier 'speak'
+		the method should have the person say their name and age
+	create a value of type person
 */
 package main
 
@@ -36,6 +48,12 @@ func main() {
 	fmt.Println(variadicfunc(xi...))
 
 	defer fmt.Println("0")
+
+	p1 := person{
+		first: "jenny",
+		age:   27,
+	}
+	p1.speak()
 }
 
 func foo() int {
@@ -53,4 +71,13 @@ func variadicfunc(ii ...int) int {
 		t += v
 	}
 	return t
+}
+
+type person struct {
+	first string
+	age   int
+}
+
+func (p person) speak() {
+	fmt.Println("My name is ", p.first, "nad my age is ", p.age)
 }
