@@ -60,7 +60,10 @@ Exercise 5 :
 */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	fmt.Println(foo())
@@ -75,6 +78,17 @@ func main() {
 		age:   27,
 	}
 	p1.speak()
+	c1 := circle{
+		radius: 4,
+	}
+	c2 := square{
+		length: 5,
+		width:  8,
+	}
+
+	fmt.Println(info(c1))
+	fmt.Println(info(c2))
+
 }
 
 func foo() int {
@@ -101,4 +115,29 @@ type person struct {
 
 func (p person) speak() {
 	fmt.Println("My name is ", p.first, "nad my age is ", p.age)
+}
+
+type square struct {
+	length float64
+	width  float64
+}
+
+type circle struct {
+	radius float64
+}
+
+func (s square) area() float64 {
+	return s.length * s.width
+}
+
+func (c circle) area() float64 {
+	return math.Pi * math.Pow(c.radius, 2)
+}
+
+type shape interface {
+	area() float64
+}
+
+func info(s shape) float64 {
+	return s.area()
 }
