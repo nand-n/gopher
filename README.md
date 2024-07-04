@@ -396,3 +396,7 @@ An Integration test woumld test b.n multiple components of a system to ensure th
 ## Documents
 
 Godocs includes comments - and produes documentation as html or plain text . The end result is the documentation tightyly coupled with the code it documents. for example godocs's web interface you can navigate form a function's documetna tot its impllementation with one click.
+
+## interfaces & mock tesing
+
+Interface in go are a powerfull tool for abstraction and can be especially usefull when you want to write unit tests for function that interact with a db . By creating an interface that describes the beheviour of a database interactions your code needs , you can swap out the real database for a mock one in your tests.
