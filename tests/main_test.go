@@ -1,10 +1,14 @@
 package main
 
-import "testing"
+import (
+	"log"
+	"testing"
+)
 
 func TestAdd(t *testing.T) {
-	total := add(5, 5)
-	if total != 10 {
-		t.Errorf("Sum was incorrect , got %d , what %d", total, 10)
+	got := add(7, 5)
+	want := 12
+	if got != want {
+		log.Fatalf("Error - waant %v and got %v ", want, got)
 	}
 }
