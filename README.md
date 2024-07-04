@@ -379,3 +379,16 @@ Go privides a built int tesitng freamwork that simplifies the process of testing
       return a + b
     }
   ```
+
+## unit test
+
+Unit test is a type of softwate testing where individual componnets or units of a softwaree are tested. The purpouse is to validate that each unit of the software performs as designed,
+A unit test is the smallerst testable part of any software. It usually has one or a few inputs and usuallly a single output.
+
+In go programming a unit test usually tests a single funcion , method or struct , the goal is to confirm that the beheviour is correct.
+
+Unit tets in ggo are typically written using the built - in testing package , 'testing' .
+
+A Unit test is a subset of test . Tests in software can take many forms such as unit tests , integration test , functionsl tests , system test ...
+
+An Integration test woumld test b.n multiple components of a system to ensure they work together correctyl.
