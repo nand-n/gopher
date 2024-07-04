@@ -36,6 +36,27 @@ Exercose 4 :
 		the identifier 'speak'
 		the method should have the person say their name and age
 	create a value of type person
+
+Exercise 5 :
+
+	create a type square
+		length float64
+		width float64
+	create type CIRCLE
+		radius float64
+	attach a method to each that calculates area and return it
+
+	create area = pi r 2
+		math.Pi
+		math.Pow
+
+	square area = L * W
+	create a type shape that defines an interface as anything that has the area method
+	create a func info which takes type shape and then prits the area
+	create a value of type square
+	create a value of type circle
+	use func info too print the area of square
+	use func info to print the area of circle
 */
 package main
 
