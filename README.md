@@ -363,3 +363,11 @@ Recurstion can be a powerful technique for solving problmes that exibit a recurs
 ## Wrapper function
 
 A wrapper function is a function that provides an additional layer of abstraction or functionality around an existing funciton or methor. It acts as intermediary b/n the caller and wrapped fucntion allowing you to modify ilnputs , outputs or behevious , without directly modifying the orginal funciton. A wrapper function wraps or modifies another function's beheviour.
+
+# Testing in go
+
+Go privides a built int tesitng freamwork that simplifies the process of testing go cod. Here is an overview of the file structe , nameing conventionss , and how testing works in go
+
+- Test files : live iln the same packages as the code they test. They are named with the following conversion 'filename_test.go' where filename is the name of the file thea contains the code you want to test.
+
+- Test functions : munst start with the word 'Test' Followed by a word that starts with a capital letter . The signature of a test function 'fucn TestXxx(\*testing.T)' whre Xxxx does not start with lower case later
