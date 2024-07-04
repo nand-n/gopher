@@ -17,7 +17,13 @@ Create a func with the identifier bar that
 	takes a paramet of type [int]
 	returns the sum of all values of type int passed in
 
-Veriadic function can be called with any number of trailing arguments
+# Veriadic function can be called with any number of trailing arguments
+
+Exercise 3 :
+
+	defer  multiple funcion in main
+		show that a defferd func runs after the func containging it exits
+		determine the ordder in which the multiple defer funcs runs
 */
 package main
 
@@ -28,6 +34,8 @@ func main() {
 	fmt.Println(bar())
 	xi := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	fmt.Println(variadicfunc(xi...))
+
+	defer fmt.Println("0")
 }
 
 func foo() int {
