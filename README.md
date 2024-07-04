@@ -394,3 +394,5 @@ A Unit test is a subset of test . Tests in software can take many forms such as 
 An Integration test woumld test b.n multiple components of a system to ensure they work together correctyl.
 
 ## Documents
+
+Godocs includes comments - and produes documentation as html or plain text . The end result is the documentation tightyly coupled with the code it documents. for example godocs's web interface you can navigate form a function's documetna tot its impllementation with one click.
