@@ -406,3 +406,9 @@ Interface in go are a powerfull tool for abstraction and can be especially usefu
 Interfaces in go are a pwerfull tool for abstraction and can be especially usefull when you want to write unit tests for functions that interact with a database.
 
 By createin an interface that describes the beheviour of the database interactions your code needs . , you can swap out the real database for a mock one in your test
+
+### Annonimus Func
+
+Annonimus func , aka funcion literal or lamada funciton is a way to define a function without giving its name , instead you can directyly declare and define a function inline when ever it is needed .
+
+Annonemous funcs are commonly used when you want to pass a function as an argument to another function or when you need to define a short lived funciton for a specific task.
