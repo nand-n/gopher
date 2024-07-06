@@ -412,3 +412,7 @@ By createin an interface that describes the beheviour of the database interactio
 Annonimus func , aka funcion literal or lamada funciton is a way to define a function without giving its name , instead you can directyly declare and define a function inline when ever it is needed .
 
 Annonemous funcs are commonly used when you want to pass a function as an argument to another function or when you need to define a short lived funciton for a specific task.
+
+### Callback functions
+
+Callback function are very common in may programming languages including go. Callbacks are essentially fucntions that are passed as argumetns to other functions and are intended to be called (or "executed") later in your program
