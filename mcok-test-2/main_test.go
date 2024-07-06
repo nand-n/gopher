@@ -1,14 +1,23 @@
 package main
 
 import (
-	"log"
 	"testing"
 )
 
 func TestParadise(t *testing.T) {
-	got := paradise("Bali")
-	want := "My idea of paradise is :Bali"
-	if got != want {
-		log.Fatalf("Error - want %s and got %s ", want, got)
+	md := &MockDataStore{
+		Users: map[int]User{
+			2: {ID: 2, Frist: "Jenny"},
+		},
+	}
+	s := &Service{
+		ds: md,
+	}
+	u, err := s.GetUser(2)
+	if err != nil {
+		t.Errorf("Got error : %v", err)
+	}
+	if u.Frist != "Jenny" {
+		t.Errorf("got : %s , wants : %s", u.Frist, "Jenny")
 	}
 }
