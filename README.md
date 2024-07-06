@@ -400,3 +400,9 @@ Godocs includes comments - and produes documentation as html or plain text . The
 ## interfaces & mock tesing
 
 Interface in go are a powerfull tool for abstraction and can be especially usefull when you want to write unit tests for function that interact with a db . By creating an interface that describes the beheviour of a database interactions your code needs , you can swap out the real database for a mock one in your tests.
+
+### Interface remainder
+
+Interfaces in go are a pwerfull tool for abstraction and can be especially usefull when you want to write unit tests for functions that interact with a database.
+
+By createin an interface that describes the beheviour of the database interactions your code needs . , you can swap out the real database for a mock one in your test
