@@ -457,3 +457,7 @@ In Go , Referecnce typ is pointer - a type of data the referes to , or points to
 4. Channels : are used for communications b/n goroutines (go term for threads) . They allow you topass data from one goroutine to another
 5. Functions : are first-class citezens , meaning they can be assigned to variables , passed a n arguments to other functions and returned as values form other functiosn .
 6. Interfaces : is type represents a set of method signatures. It provides a way to specify the beheviour of an object. If somthing can dothis , then it can be used here.
+
+In go all data is passed by value , which means that when ever you pass data to function go creates a copyof that data and assign the copy of a prameter variable. The function can do whetever it wants to copy with out affecting the orginal data.
+
+A mutable value is a value that can be changed . In go slices , maps , and pointers are mutable data types . Even though they are passed by value , they still behave as if they ware passed by references becaluse the 'Value' that copied and passed is reference to the underlying data , not the actual data
