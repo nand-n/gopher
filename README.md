@@ -461,3 +461,11 @@ In Go , Referecnce typ is pointer - a type of data the referes to , or points to
 In go all data is passed by value , which means that when ever you pass data to function go creates a copyof that data and assign the copy of a prameter variable. The function can do whetever it wants to copy with out affecting the orginal data.
 
 A mutable value is a value that can be changed . In go slices , maps , and pointers are mutable data types . Even though they are passed by value , they still behave as if they ware passed by references becaluse the 'Value' that copied and passed is reference to the underlying data , not the actual data
+
+## Pointer and value semantic
+
+Semantic means relating in language or logic
+
+#### Value Semantic
+
+Value semantic refers to when the actual data of a variable is passed to a function or assigned to another variable. This means that the new varibale or function parameter gets a completely independent copy of the data.
