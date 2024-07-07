@@ -448,3 +448,12 @@ Will pass the value of the variable into the method , the orginal variable 'copy
 ### Pass by reference
 
 Will pass the memory location instead of the value , It passess the 'container' of the variables incide the memory will affect the orginal variable
+
+In Go , Referecnce typ is pointer - a type of data the referes to , or points to , the locatoin in memory of a value. Go have serveral references type including pointers , slices , maps , channels , functions and interfaces
+
+1. Pointers : A pointer holds the memory address of a value . It allows you to directly access and modify the memory location of a value
+2. Slices : is a descriptor of an array segment. It includes a ponter to the array , the length of the segment and its's capacity (the maximum length of the segment)
+3. Maps : is a powerfull data structure that associates values of one type (the key) with values of another type (the vlue). It's an unordered collectoin of key-value pairs
+4. Channels : are used for communications b/n goroutines (go term for threads) . They allow you topass data from one goroutine to another
+5. Functions : are first-class citezens , meaning they can be assigned to variables , passed a n arguments to other functions and returned as values form other functiosn .
+6. Interfaces : is type represents a set of method signatures. It provides a way to specify the beheviour of an object. If somthing can dothis , then it can be used here.
