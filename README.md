@@ -440,3 +440,11 @@ In go , a pointer refers to a varibale that holds the memory adress. Pointers ar
 ### Dereferencing pointers
 
 Is geting the value out of the memory adddress or simply getting value of that memeory address , that allows to directly manipulate the vlaue.
+
+### Pass by Value
+
+Will pass the value of the variable into the method , the orginal variable 'copy' the value into another memory location and pass the newly created one into the method , so any thing that happens to the varianle incide the method will not affect teh orginal variable value.
+
+### Pass by reference
+
+Will pass the memory location instead of the value , It passess the 'container' of the variables incide the memory will affect the orginal variable
