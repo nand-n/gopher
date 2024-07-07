@@ -416,3 +416,21 @@ Annonemous funcs are commonly used when you want to pass a function as an argume
 ### Callback functions
 
 Callback function are very common in may programming languages including go. Callbacks are essentially fucntions that are passed as argumetns to other functions and are intended to be called (or "executed") later in your program
+
+# Pointers
+
+Pointers provide a way to pass references to data instead of copying the entire data , which can be especially beneficial for large data structure .
+
+## \* (Asterisk)
+
+- Is used to declare a pointer variable.
+  ex: \*int gives the memory addres of the type
+- Is used to dereference a pointer, which means accessign the value stored at the memory address pointed by the pointer variable.
+
+## & (Ampersand)
+
+- Is used to get the memory addrtess of a variable  
+   ex: &num gives the memory address of the variable num.
+- Is commonly used when working with pointers , passing variables memory address to functions , or initializing pointers with existing variables
+
+The Pointers is a memory adress
