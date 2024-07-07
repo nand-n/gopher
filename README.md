@@ -434,3 +434,5 @@ Pointers provide a way to pass references to data instead of copying the entire 
 - Is commonly used when working with pointers , passing variables memory address to functions , or initializing pointers with existing variables
 
 The Pointers is a memory adress
+
+In go , a pointer refers to a varibale that holds the memory adress. Pointers are a powerfull feature that allows you to directly manipulate memory and build complex data structure like linkedlist , trees and more .
