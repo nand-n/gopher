@@ -469,3 +469,30 @@ Semantic means relating in language or logic
 #### Value Semantic
 
 Value semantic refers to when the actual data of a variable is passed to a function or assigned to another variable. This means that the new varibale or function parameter gets a completely independent copy of the data.
+
+## Pointer & Value Semantics heuristics
+
+There are some general guidance you can follow when deciding whether to use pointer or values semantics in go
+
+1. Use Value Semantics when Possible
+
+   - Value semantics are simpler and usually safer , since they don't involve shared state or require you to think about memoryo management.
+   - As a rule of thumb , if a function doesn't need to modify its input or the data you're working with is small (like built in type or small structs ) use value semantics
+
+2. Use Pointer Semanitcs for llarger Data
+
+   - Copying large structs or arrays can be inefficient
+   - If the data you're working with is large , you might want to use pointer semantics to avoid the cost of copying the data. A rule of thumb: 64 bytes or larger , use pointers
+
+3. Use Pointer Semantics for mutablity
+
+   - If a function or mehtod needs to modify its reciever or an input paramter , you will need to use pointer semanitcs .
+   - This is common use coase for methods that need to update the state of a struc.
+
+4. Consitency :
+
+   - It is important to be consitent if some fucnitons on type use pointer semantics and other use value semantics , this can leads to confusion. Typically , onces a type has a mehtod with pointer semantics , all methods on that type should have pointer semanitcs.
+
+5. Pointer Semantics when interfacing with other code
+
+   - If you're interfaciing with other code (like a library or a system call) you might need to use ponter semantics .
