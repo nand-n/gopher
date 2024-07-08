@@ -508,3 +508,16 @@ In GO , when a funciton recieves a vlaue (not pointer) , it gets its own copy of
 ### Ponter Semantics & the heap
 
 When a function recieves a pointer or retuns a ponter to local variables it indicates to the compiler that this value could be shared across goroutine boundaries or could persist after the function returns. TO ensure that the data will remain available , the go compiler must allocate it on the heap , rather than on the stack . Heap allocation is more expensive and requires garbase collaction.
+
+# Method Sets
+
+Is the set of methods attached to a type. This concept is key to Go's interface mechanism and it is associated with both the value types and pointer type
+
+- The Method set type T consists of all methods with reciever type T.
+- The Methdo set of type *T consists of all method with reciever *T or T.
+
+The Idea of the method set is integeral to how interfacecs are implemented andused in go .
+
+An Interface isn go defines a method set and any type whose method set is superset of the interface's method set is considered to implement that interface.
+
+A crucial thing to remember is that in GO, if you define a method with a pointer reciever , the method is only int he method set of pointer type . Tlhis is important int he context of interfaces b/c if an interface requires a method that's defined on the pointer (not the value) then you can use a pointer to that type to satisfy these interface, not a value of the type.
