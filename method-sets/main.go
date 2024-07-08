@@ -15,10 +15,20 @@ func (d *dog) run() {
 	fmt.Println("My name is ", d.first, "and i'm runing `")
 }
 
+type youngin interface {
+	walk()
+	run()
+}
+
+func younginRun(y youngin) {
+	y.run()
+}
+
 func main() {
 	d1 := dog{"henery"}
 	d1.walk()
 	d1.run()
+	younginRun(&d1)
 	d2 := &dog{"Padget"}
 	d2.walk()
 	d2.run()
