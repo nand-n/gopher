@@ -496,3 +496,5 @@ There are some general guidance you can follow when deciding whether to use poin
 5. Pointer Semantics when interfacing with other code
 
    - If you're interfaciing with other code (like a library or a system call) you might need to use ponter semantics .
+
+- "The Majority of bugs that we gets in software have to do with the mutation of memory " --> Bill Kenedy
