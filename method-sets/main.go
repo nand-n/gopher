@@ -24,6 +24,10 @@ func younginRun(y youngin) {
 	y.run()
 }
 
+type person struct {
+	first string
+}
+
 func main() {
 	d1 := dog{"henery"}
 	d1.walk()
@@ -32,4 +36,19 @@ func main() {
 	d2 := &dog{"Padget"}
 	d2.walk()
 	d2.run()
+	p1 := person{
+		first: "Jenny",
+	}
+
+	p1 = changeName(p1, "Jen")
+	changeNamePtr(&p, "JMP")
+}
+
+func changeName(p person, s string) person {
+	p.first = s
+	return p
+}
+
+func changeNamePtr(p *person, s string) {
+	p.first = s
 }
