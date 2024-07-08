@@ -498,3 +498,13 @@ There are some general guidance you can follow when deciding whether to use poin
    - If you're interfaciing with other code (like a library or a system call) you might need to use ponter semantics .
 
 - "The Majority of bugs that we gets in software have to do with the mutation of memory " --> Bill Kenedy
+
+# The Heap vs Stack
+
+### Value Semantics
+
+In GO , when a funciton recieves a vlaue (not pointer) , it gets its own copy of that value. This copy is typically placed on the stack , which is fast and doesn't invole any form of garbage collection . Once the funciotn retuns this memory can be instantly reclaimed,
+
+### Ponter Semantics & the heap
+
+When a function recieves a pointer or retuns a ponter to local variables it indicates to the compiler that this value could be shared across goroutine boundaries or could persist after the function returns. TO ensure that the data will remain available , the go compiler must allocate it on the heap , rather than on the stack . Heap allocation is more expensive and requires garbase collaction.
