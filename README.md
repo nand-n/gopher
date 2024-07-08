@@ -521,3 +521,7 @@ The Idea of the method set is integeral to how interfacecs are implemented andus
 An Interface isn go defines a method set and any type whose method set is superset of the interface's method set is considered to implement that interface.
 
 A crucial thing to remember is that in GO, if you define a method with a pointer reciever , the method is only int he method set of pointer type . Tlhis is important int he context of interfaces b/c if an interface requires a method that's defined on the pointer (not the value) then you can use a pointer to that type to satisfy these interface, not a value of the type.
+
+# Gemerics
+
+Will help us achive the dry prenciples , by alowing us to define dynamic type.
