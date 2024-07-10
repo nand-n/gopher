@@ -525,3 +525,4 @@ A crucial thing to remember is that in GO, if you define a method with a pointer
 # Gemerics
 
 Will help us achive the dry prenciples , by alowing us to define dynamic type.
+With Generics , you can declare and use funciton or types that are written to work with any of a set of types provided by calling code
