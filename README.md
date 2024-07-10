@@ -526,3 +526,35 @@ A crucial thing to remember is that in GO, if you define a method with a pointer
 
 Will help us achive the dry prenciples , by alowing us to define dynamic type.
 With Generics , you can declare and use funciton or types that are written to work with any of a set of types provided by calling code
+
+## Concret type vs interface type
+
+### Concrete type
+
+is a type that you can directly instanciate or create a value from. this means that the type can directly represent a set of values and that you can create an instace of this type with out any additional informatioon.
+
+Example of concreate type : int , bool , float64 arrays , slices , maps , and structs month the others . These type shave specific predetermined storage layout characterstcs.
+
+```go
+type Employee struct {
+  Name string
+  Age int
+}
+emp := Employee{Name:"John" , Age:2}
+```
+
+### Interface type
+
+Set of methods or types but does not define specific data layout ro instace.
+Interface types are abstract - they represent beheviour or type but not a specific set of values.
+
+if you declare an interface like 'io.Reader' you can not directly create an instacne of io.Reader , instead you create instances concreate type taht satisfy the ioReader interface
+
+```go
+
+type Reader interface {
+  Read(p [byte])(n int , err error)
+}
+```
+
+In the latter case io.Reader is an interface type and any type that implements the Read method with the correct signature is said to satisfy the io.Reader interface
