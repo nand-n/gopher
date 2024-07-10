@@ -558,3 +558,7 @@ type Reader interface {
 ```
 
 In the latter case io.Reader is an interface type and any type that implements the Read method with the correct signature is said to satisfy the io.Reader interface
+
+- In go if the Variable name start wtih capital letter it means it is viewable outside of the package
+
+# Application
