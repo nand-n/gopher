@@ -574,3 +574,18 @@ Unmaprsahl parses the JSON-encoded data and stores the result in the vlaue point
 Unmparshal uses inverse of the encodeing that Marshal uses , allocating maps , slices and pointers as necessary .
 
 To Umparshal json int o a pointer , unmarshal first handles the case of the JSON being the JSON literal null. In that case , unmpardhsla sets the pointer to nil . Other wise unmarshal unmarshals the json into the value pointed at by the pointer if the pointer is nil , unmarshal allocates a new vlaue for it to point to.
+
+## Writer interface
+
+Writer is the interface that wraps the basic writer method
+Writer writes len(p) bytes from p to the underlying data stream. it returns teh number of bytes written from p (0<=n<=len(p)>>) and any error encountered that caused the writer to stop early. Writer must reaturn a non-nil error if it reatns n<len(p) Writer must bot modify the slice data even temporaril.
+
+```go
+  type Writer interface {
+    Writer(p [byte] (n int , err error))
+  }
+```
+
+### Decode
+
+Decode reads the next JSON-encoe value from its input and stores it inthe value pointed to by v
