@@ -563,6 +563,10 @@ In the latter case io.Reader is an interface type and any type that implements t
 
 # Application
 
+## Marshal
+
+Marshal traverse teh value v recursivel. if an encountered value implements the Marshaller interface and is not a nil pointer , Marshal calls its MarshalJson Method to produce JSON . If no marshalJson Method is present but the value implements encoding .
+
 ## Unmarshal
 
 Unmaprsahl parses the JSON-encoded data and stores the result in the vlaue pointed to by v.
