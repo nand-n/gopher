@@ -562,3 +562,11 @@ In the latter case io.Reader is an interface type and any type that implements t
 - In go if the Variable name start wtih capital letter it means it is viewable outside of the package
 
 # Application
+
+## Unmarshal
+
+Unmaprsahl parses the JSON-encoded data and stores the result in the vlaue pointed to by v.
+
+Unmparshal uses inverse of the encodeing that Marshal uses , allocating maps , slices and pointers as necessary .
+
+To Umparshal json int o a pointer , unmarshal first handles the case of the JSON being the JSON literal null. In that case , unmpardhsla sets the pointer to nil . Other wise unmarshal unmarshals the json into the value pointed at by the pointer if the pointer is nil , unmarshal allocates a new vlaue for it to point to.
