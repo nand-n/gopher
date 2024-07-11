@@ -591,3 +591,5 @@ Writer writes len(p) bytes from p to the underlying data stream. it returns teh 
 Decode reads the next JSON-encoe value from its input and stores it inthe value pointed to by v
 
 ## Bcrypt
+
+Is a package in go that implements Provos and Mazières’s bcrypt adaptive hashing algorithm to calculate hash
