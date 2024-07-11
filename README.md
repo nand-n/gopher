@@ -589,3 +589,5 @@ Writer writes len(p) bytes from p to the underlying data stream. it returns teh 
 ### Decode
 
 Decode reads the next JSON-encoe value from its input and stores it inthe value pointed to by v
+
+## Bcrypt
