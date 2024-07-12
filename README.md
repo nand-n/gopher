@@ -624,3 +624,7 @@ Concurrent programing in many environment is made difficult by the subtleties re
 Data races cannot occur by desing.
 
 "" Do not communicate by sharing memory; Instead share memory by communicating.
+
+This Approach can be taken too far.. References coutns may be best done by puttin a mutex around an integer variables , for instance. But as a high level approach , using channels to controll access makes it easier to write clear , correct programs .
+
+One way to think about this model is to consider a typical single-threaded program running on one cpu. it has no nead to synchronization primitives. now run another such instances ; it too needs no synchronization . now let those two communicate ; if the communication is the synchronizer , ther 's still no need for other synchronization. Unix pipelines for examples fit this model perfectly. Although Go's approach to concurency originates in hoare's Communicating sequential process(csp) it can also be seen as type safe generalization of unix pipes
