@@ -608,3 +608,9 @@ Concurency is about dealing with lots of things at onece , parallerism is about 
 A type may have a method set associated with it. THe method set of an interface type is its interface. The method set of any other type T consists of all methods declared with reciever type T. The method set of the corresponding pointer type *T is the set of all methods declared with reciever *T or T (that is , it also contains the method set of T). Futrhter rules apply to structs containing anonymous fields as described in the section on struct types any other types has an emty methd set. in a method set , each method must have a unique non-blank mehtod name.
 
 The method sets of a type determines the interfaces that the type implements and the methods that can be called using a reciever of that type.
+
+## Go statements
+
+Go statements starts with the execution of a fnction call as an independent concuerent thread of control or gorounte with the same address space.
+
+THe function value and parameters are evaluated as usual in the calling goroutine , but unlike with a regular call , program execution does not wait for the invoked functions to complate. Instead , the funcion begins executing independently in a new goroutine. When the function terminates , its goroitine also terminates. If the function has any return values , they are discarded withn the funcion complates.
