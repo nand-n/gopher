@@ -614,3 +614,13 @@ The method sets of a type determines the interfaces that the type implements and
 Go statements starts with the execution of a fnction call as an independent concuerent thread of control or gorounte with the same address space.
 
 THe function value and parameters are evaluated as usual in the calling goroutine , but unlike with a regular call , program execution does not wait for the invoked functions to complate. Instead , the funcion begins executing independently in a new goroutine. When the function terminates , its goroitine also terminates. If the function has any return values , they are discarded withn the funcion complates.
+
+# Concurency
+
+## Share by communicating
+
+Concurrent programing in many environment is made difficult by the subtleties required to implement correct assess to shared variabes. Go encourages a d/t approach in which shared values are passed around on channels and infact , never actively shared by separate threads of execution . Only one goroutine has access to the value at any given time.
+
+Data races cannot occur by desing.
+
+"" Do not communicate by sharing memory; Instead share memory by communicating.
