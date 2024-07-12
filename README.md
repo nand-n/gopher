@@ -628,3 +628,11 @@ Data races cannot occur by desing.
 This Approach can be taken too far.. References coutns may be best done by puttin a mutex around an integer variables , for instance. But as a high level approach , using channels to controll access makes it easier to write clear , correct programs .
 
 One way to think about this model is to consider a typical single-threaded program running on one cpu. it has no nead to synchronization primitives. now run another such instances ; it too needs no synchronization . now let those two communicate ; if the communication is the synchronizer , ther 's still no need for other synchronization. Unix pipelines for examples fit this model perfectly. Although Go's approach to concurency originates in hoare's Communicating sequential process(csp) it can also be seen as type safe generalization of unix pipes
+
+## Goroutines
+
+Thery're called goroutines because the existin terms -- threads , coroutines , processes and so on -- coonvery inaccurate connotations. A goroutine has a simple model: it is a function executing concurrently wilth other goroutines in the same address space. it is lightweight , costing litle more than the allocation of stack space. and the stacks starts small , so they are cheap and grow by allocating (and freeing) heap storage as required.
+
+Goroutines are multiplexed onto multiple os threads so if one should block , such as while waiting for i/o others continue to run. Their desing hides many of the complexities of thread creation and management.
+
+Prefix a funcion or meethod call with the go keyword to run the call in a new goroutine. when the call complates the goroutine exits , silently
