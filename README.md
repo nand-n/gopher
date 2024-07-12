@@ -593,3 +593,12 @@ Decode reads the next JSON-encoe value from its input and stores it inthe value 
 ## Bcrypt
 
 Is a package in go that implements Provos and Mazières’s bcrypt adaptive hashing algorithm to calculate hash
+
+# Concurency
+
+Concurency is the composition of independently executing processes.
+
+## Concurency vs Parallerism
+
+Paralallism is simulatenious execution of (possibly related ) computations,
+Concurency is about dealing with lots of things at onece , parallerism is about lots of things at once
