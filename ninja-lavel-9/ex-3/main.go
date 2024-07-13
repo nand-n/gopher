@@ -1,5 +1,11 @@
 package main
 
+import (
+	"fmt"
+	"runtime"
+	"sync"
+)
+
 /*
 using go routines create an increment program
 	have a variable to hold the incrementer value
@@ -17,5 +23,21 @@ using go routines create an increment program
 */
 
 func main() {
+	var wg sync.WaitGroup
+	incrementer := 0
+	gs := 100
+	wg.Add(gs)
 
+	for i := 0; i < gs; i++ {
+		go func() {
+			v := incrementer
+			runtime.Gosched()
+			v++
+			incrementer = v
+			wg.Done()
+		}()
+	}
+	wg.Wait()
+
+	fmt.Println(incrementer)
 }
