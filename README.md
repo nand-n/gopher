@@ -647,3 +647,9 @@ A race condition occures when two threads access a shared variable at the same t
 
 mutex are used to provide synchronization b/n concurent goroutines to prevent data races and ensures that only one goroutine can access a shared resource ata a time.
 Mutext stands for 'mutual exclusion' and it allows you to controll access to shared resources safely
+
+### Atomic
+
+Package atomic provides low-level atomic memory primitives use full for implementing synchronization algorithms.
+
+it allows to synchronize race conditions
