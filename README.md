@@ -636,3 +636,14 @@ Thery're called goroutines because the existin terms -- threads , coroutines , p
 Goroutines are multiplexed onto multiple os threads so if one should block , such as while waiting for i/o others continue to run. Their desing hides many of the complexities of thread creation and management.
 
 Prefix a funcion or meethod call with the go keyword to run the call in a new goroutine. when the call complates the goroutine exits , silently
+
+## Race Condition
+
+Race condition is an undesirable situation that occurs when a device or a system attempts to perform two or more operations at the saame time.
+
+A race condition occures when two threads access a shared variable at the same time
+
+### Mutex
+
+mutex are used to provide synchronization b/n concurent goroutines to prevent data races and ensures that only one goroutine can access a shared resource ata a time.
+Mutext stands for 'mutual exclusion' and it allows you to controll access to shared resources safely
