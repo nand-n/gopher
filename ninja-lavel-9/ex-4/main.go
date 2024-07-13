@@ -37,7 +37,9 @@ func main() {
 			v := incrementer
 			v++
 			incrementer = v
+			fmt.Println("Incremented by : ", incrementer)
 			mt.Unlock()
+
 			wg.Done()
 		}()
 	}
