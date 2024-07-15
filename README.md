@@ -653,3 +653,32 @@ Mutext stands for 'mutual exclusion' and it allows you to controll access to sha
 Package atomic provides low-level atomic memory primitives use full for implementing synchronization algorithms.
 
 it allows to synchronize race conditions
+
+# Channels
+
+Like maps , channels are allocated with make , and the resulting value acts as reference to an underlying data structure. if an optinal integer parameter is provided , it sets the buffer size for the channel. The default is zero for an unbuffered or synchronous channle.
+
+```go
+ci:= make(chan int)            //unbuffered channel of integers
+cj:= make(chan int , 0)        // unbuffered channel of integers.
+cs:= make(chan *os.File , 100) // buffered chanlel of ponters to Files
+```
+
+Unbuffered channels combine communication -- the exchange of value -- with synchronization -- guaranteeing that two calculation (goroutines) are in a known state.
+
+There are lots of nice idoms using channels , Here's one to get us started. int he previous sectin we launched a sort in the background. A channel can allow the launching goroutine to wait for the sort to complate.
+
+```go
+ c:= make(chan int) // allocate a channel
+ //start the sort in goroutine; when it complates , signal on the channel
+ go func(){
+  list.Sort()
+  c<-1 //send a signal; value does not matter.
+ }()
+ doSomethingForAwhile()
+ <-c // wait for sort to finish; discard sent value.
+```
+
+Recievers always block until there is data to recieve. if the cahnnle is unbuffered the sender blocks until the revciever has recieved the value. If the Channel has a buffer , the sender blocks only until the value has been copied to the buffer; if the buffer is full this means waiting until some reciever has retrieved a value .
+
+A buffer channel can be used like semaphore for instance to limit throughput.
