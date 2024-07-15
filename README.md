@@ -692,7 +692,7 @@ one runner can't pass the baton at one momemtn
 and then later have the other runner recieve the baton
 the baton is passed / recieved by the runners at the same time
 
-    the value is passed/recieved synchronously ; at the sma etime
+    the value is passed/recieved synchronously ; at the same etime
 
 Channels allows us to pass vaue b/n goroutines
 
@@ -702,3 +702,5 @@ coordination / synchronization / orchestration
 buffering (buffered channels)
 
 The Capacity , in number of element , sets the size of the buffer in the cahnnel. if the capacity is zero or absent , the channel is unbuffered dna communication succeeded only when both a sender and reciever are ready.
+
+## Directional channles
