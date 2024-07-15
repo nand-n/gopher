@@ -682,3 +682,21 @@ There are lots of nice idoms using channels , Here's one to get us started. int 
 Recievers always block until there is data to recieve. if the cahnnle is unbuffered the sender blocks until the revciever has recieved the value. If the Channel has a buffer , the sender blocks only until the value has been copied to the buffer; if the buffer is full this means waiting until some reciever has retrieved a value .
 
 A buffer channel can be used like semaphore for instance to limit throughput.
+
+Channels block
+they are llike runners in a rely race
+they are synchronized
+they have to ppass / recieve the value at athe same time
+just like runners in a relayrace have to pass / recieve the baton to each other at the same time
+one runner can't pass the baton at one momemtn
+and then later have the other runner recieve the baton
+the baton is passed / recieved by the runners at the same time
+
+    the value is passed/recieved synchronously ; at the sma etime
+
+Channels allows us to pass vaue b/n goroutines
+
+Channles block
+Channels allow
+coordination / synchronization / orchestration
+buffering (buffered channels)
