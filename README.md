@@ -700,3 +700,5 @@ Channles block
 Channels allow
 coordination / synchronization / orchestration
 buffering (buffered channels)
+
+The Capacity , in number of element , sets the size of the buffer in the cahnnel. if the capacity is zero or absent , the channel is unbuffered dna communication succeeded only when both a sender and reciever are ready.
