@@ -710,3 +710,22 @@ IN go servers , each incoming request is handled in its own goroutine. Requests 
 At Google , they developed a context package that makes it easy to pass request-scoped values , cancelation signals , and deadlines across API boundaries to all the goroutines involved in handling a request. The package is publiclly available as context.
 
 There are some classes of information for wich a context is necessary. This is so-called request scoped data. i.e information that can onlyl exist once a request has begun. Good example of request scaped data include user IDs extracted form headers , authentication tocken stied to cookies or session IDs , destributed tracing IDs and so on.
+
+## Context package
+
+package context defines the context type , which carries deadlines , cancelation signals and other request scoped values across API boundaries and b/n processes.
+
+Incoming requests to a server should create a Context , and outgooing calls to servers should accpt a context.
+
+When a context is canceled , all contexts derived form it are also canceled.
+
+The WithCancel , WithDaedline and WithTimeOut funciton take context (the parent) and return a derived Context (the child) and a CancelFunc .
+
+Do not store Contexts incide a struct type instead pass a context explicityly to each function that needs it. The context should be the first parameter typeically named ctx:
+
+```go
+  func DoSomethign(ctx context.Context , arg Arg) error {
+    // .........use ctx ..............
+  }
+
+```
