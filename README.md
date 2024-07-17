@@ -703,4 +703,10 @@ buffering (buffered channels)
 
 The Capacity , in number of element , sets the size of the buffer in the cahnnel. if the capacity is zero or absent , the channel is unbuffered dna communication succeeded only when both a sender and reciever are ready.
 
-## Directional channles
+# Go Concurency patterns : Context
+
+IN go servers , each incoming request is handled in its own goroutine. Requests handlers often start additional goroutines to access backends such as databases and RPC services. The set of goroutines working on a request typically needds access to request-specific values such as the identity of the enduser , autherization tokens , and the request's deadline. When a request is canceled or timeout , all the goroutines working on that request should exit quickly so the system can recaim any resqources they are using.
+
+At Google , they developed a context package that makes it easy to pass request-scoped values , cancelation signals , and deadlines across API boundaries to all the goroutines involved in handling a request. The package is publiclly available as context.
+
+There are some classes of information for wich a context is necessary. This is so-called request scoped data. i.e information that can onlyl exist once a request has begun. Good example of request scaped data include user IDs extracted form headers , authentication tocken stied to cookies or session IDs , destributed tracing IDs and so on.
