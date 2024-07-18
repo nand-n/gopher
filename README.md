@@ -766,3 +766,20 @@ Go has the usual mechanisms for contol flow : if , for , switch , goto . it also
 A defer statement pushes a funcion call on to a list. The list of saved calls is ececuted after the surrounding function returns . Defer is commonly used to simplify funcions that perform various clean up actions .
 
 defur statement allows us to think about closing each file right after opening it , guaranteeing that , regradless of the number of return statement i n the funcion , the file will be closed
+
+```go
+  func CopyFile(dstName , srcName string) (written int64 , err error){
+    src , err := os.Open(srcName)
+    if err!= nil {
+      return
+    }
+    defer src.Close()
+    dst , err := os.Create(dstName)
+    if err != nil {
+      return
+    }
+    defer dst.Close()
+
+    retrn io.Copy(dst , src)
+  }
+```
