@@ -741,3 +741,16 @@ Go takes a d/t apprach , for plain error handling , Go's multi-velel returns mak
 Go also has acouple of built int funcitons to signal and recover from truly exceptional conditions. The recovery mechanism is executed only as part of a function's state being torn down after an error, which is sufficient to handle catastrophe but requires no extra controll strucuters and when used well , can result in clean error-handling code.
 
 #### Write the code with erros before writing the code with out erros. Always chack for errors . Always always always.
+
+## Printing & logging
+
+you have fiew options to chose from when it comes to pringing out or loggin an error message
+
+- fmt.Println()
+- log.Pringln()
+- log.Fatalln()
+  - os.Exit()
+- log.Panicln()
+  - deffered functions run
+  - can use 'recover'
+- panic()
