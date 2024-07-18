@@ -737,3 +737,5 @@ Do not store Contexts incide a struct type instead pass a context explicityly to
 They belive that coupling exceptions to control structure as in the try-catch-finaliy idiom , results in convoluted code. It also tends to encourage programmers to label too many ordinary errors such as failing to open a file , as exeptional.
 
 Go takes a d/t apprach , for plain error handling , Go's multi-velel returns make it easy to report an error without overloading the return value. A cannonical error type , couppling with go's other features , makes error handling preasunt but quite d/t form that in other languages
+
+Go also has acouple of built int funcitons to signal and recover from truly exceptional conditions. The recovery mechanism is executed only as part of a function's state being torn down after an error, which is sufficient to handle catastrophe but requires no extra controll strucuters and when used well , can result in clean error-handling code.
