@@ -754,3 +754,7 @@ you have fiew options to chose from when it comes to pringing out or loggin an e
   - deffered functions run
   - can use 'recover'
 - panic()
+
+### Panic
+
+The panic built in funciton stops normal execution of the current goroutine. When a funcoin F calls panic normal execution of F stops immediately . Any funcions whose execution was deffered by F are run in the usual way and then F returns to its caller. To the caller G , The invocation fo F then behaves like a call to panic, terminating G's executions and running any deffered functions . This continues until all funciosnin the executing goroutine have stoppped , in reveres order , At that point the program is terminated and the error conditino is reported , including the value of the argument to panic. This terminates sequences is called panicking and can be controller y the builtin funcion recover.
