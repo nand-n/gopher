@@ -729,3 +729,11 @@ Do not store Contexts incide a struct type instead pass a context explicityly to
   }
 
 ```
+
+# Error handling
+
+## why does go not have exceptions?
+
+They belive that coupling exceptions to control structure as in the try-catch-finaliy idiom , results in convoluted code. It also tends to encourage programmers to label too many ordinary errors such as failing to open a file , as exeptional.
+
+Go takes a d/t apprach , for plain error handling , Go's multi-velel returns make it easy to report an error without overloading the return value. A cannonical error type , couppling with go's other features , makes error handling preasunt but quite d/t form that in other languages
