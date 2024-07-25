@@ -39,3 +39,12 @@ func factorial(n int) chan int {
 	}()
 	return out
 }
+
+/*
+Tods answer for Why using concurency for factorial
+A goroutine , concurency and parrallerism is helpfull when you have a lot of processing to do
+if he needed to process thousands of factorial calculation then putting them
+into a goroutine and running those calculations concurently and in parrellel
+using all the cpu cores on my maching will help those calculation get done
+faster
+*/
