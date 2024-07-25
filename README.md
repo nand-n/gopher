@@ -796,3 +796,10 @@ The capacity , in number of element sets the size of the buffer in the channle .
 make(chan int , 100)
 
 ```
+
+## deadlock
+
+A deadlock occers when a set of goroutines are writing for each other , and non can move forward.
+for instance , a deadlock occurs when a goroutine attempts to recieve a message from an empty channel and has no other goroutines active.
+
+The reciever goroutine in this case never recieves a message.
