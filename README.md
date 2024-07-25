@@ -803,3 +803,19 @@ A deadlock occers when a set of goroutines are writing for each other , and non 
 for instance , a deadlock occurs when a goroutine attempts to recieve a message from an empty channel and has no other goroutines active.
 
 The reciever goroutine in this case never recieves a message.
+
+# Pipelines and Cancelation
+
+Go's concurency primitives make it easy to construct streaming data piplines that makes efficietn use of I/O and multiple CPUs.
+
+## What is Pipeline?
+
+There is no formal definition of piplelinie in go; it is just one of may kinds of concurent programs. Informally , a pipeline is a series of stages connected by channels , where each stage is a group of goroutines running the same function , in each stage , the goroutines
+
+- recieve valeus form upstream via inbound channels
+- perform some function on that data , usually producing new values.
+- send values downstream via outbound channels
+
+Each stage has any number of inbound and outbound channels except the first and last stages , which have only outbound or in bound channels , respectivesly .
+
+THe first stage is sometimes called the sources or producer, the last stage , the sing or consumer.
