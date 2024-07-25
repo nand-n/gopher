@@ -783,3 +783,16 @@ defur statement allows us to think about closing each file right after opening i
     retrn io.Copy(dst , src)
   }
 ```
+
+# Channels
+
+## Applied Chanles
+
+The optinal <- operator specifies the chanel direction , send or recieve. if no direction is given the chanle is bidirectional. A channel may be constrained only to send or only to reciev e by conversation or assignment.
+
+The capacity , in number of element sets the size of the buffer in the channle . If the capacity is zeror or absent the channel is unbuffered and communication succeds only when both senders and recievers are ready. other wise the channel is buffered and communication succeeds without blocking if the buffer is not full(sends) or not empty (recieves). A nil channel is never ready for communication.
+
+```go
+make(chan int , 100)
+
+```
