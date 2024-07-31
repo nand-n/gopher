@@ -819,3 +819,13 @@ There is no formal definition of piplelinie in go; it is just one of may kinds o
 Each stage has any number of inbound and outbound channels except the first and last stages , which have only outbound or in bound channels , respectivesly .
 
 THe first stage is sometimes called the sources or producer, the last stage , the sing or consumer.
+
+# Handling Error
+
+## Why does go not have exceptions?
+
+We belive that coupling exception to control structure as in the try-catch-finaly diom , results in convoluted code. It also tends to encourage programmers to label too many ordirary errors such as failing to open a file , as exceptional.
+
+Go take a d/t approach. For plain error handling . Go's multi-value retuns make it easy to report an error without overloading the return value. A canonical error type ,coupled with Go's other features , makes error handling pleasant but quiet d/t from that in other languages.
+
+Go also has a couple of built in functions to signal and reecover form truly exceptional conditions. The recovery mechanism is executed only as part of a function's state being torn down after an error , which is sufficient to handle catastrope but requires no extra control structures and when used well , can result in clean error-handling code.
