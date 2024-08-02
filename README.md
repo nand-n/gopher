@@ -829,3 +829,11 @@ We belive that coupling exception to control structure as in the try-catch-final
 Go take a d/t approach. For plain error handling . Go's multi-value retuns make it easy to report an error without overloading the return value. A canonical error type ,coupled with Go's other features , makes error handling pleasant but quiet d/t from that in other languages.
 
 Go also has a couple of built in functions to signal and reecover form truly exceptional conditions. The recovery mechanism is executed only as part of a function's state being torn down after an error , which is sufficient to handle catastrope but requires no extra control structures and when used well , can result in clean error-handling code.
+
+# Os Exit function
+
+```go
+func Exit (code int)
+```
+
+Exit caouses the current program to exit with the given status code. COnventionaly , code zero in success , non-zero an error. The program terminates imediatly ; defered functionsl are not run.
