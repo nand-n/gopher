@@ -830,10 +830,18 @@ Go take a d/t approach. For plain error handling . Go's multi-value retuns make 
 
 Go also has a couple of built in functions to signal and reecover form truly exceptional conditions. The recovery mechanism is executed only as part of a function's state being torn down after an error , which is sufficient to handle catastrope but requires no extra control structures and when used well , can result in clean error-handling code.
 
-# Os Exit function
+### Os Exit function
 
 ```go
 func Exit (code int)
 ```
 
 Exit caouses the current program to exit with the given status code. COnventionaly , code zero in success , non-zero an error. The program terminates imediatly ; defered functionsl are not run.
+
+### Panic Error
+
+```go
+func panic(v interface{})
+```
+
+THe panic builtin funciton stops normal executaion of the current goroutine. When a funcion F calls panic , normal execution of F stops immediatly. Any funcions whose execution was deferred by F are run inthe usual way , and then F returns to its caller. To the caller G the invocation of F then behhaves like a calll to panic , terminating G's execution and runnign any deferred funcions.
