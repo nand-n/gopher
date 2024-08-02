@@ -845,3 +845,5 @@ func panic(v interface{})
 ```
 
 THe panic builtin funciton stops normal executaion of the current goroutine. When a funcion F calls panic , normal execution of F stops immediatly. Any funcions whose execution was deferred by F are run inthe usual way , and then F returns to its caller. To the caller G the invocation of F then behhaves like a calll to panic , terminating G's execution and runnign any deferred funcions.
+
+This continious unitl all functions int he executing goroutine have stopped , in revere order . At that point , the program is terminated and the error condition is reported including the value of the argment to panic.
